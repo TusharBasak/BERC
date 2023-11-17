@@ -91,7 +91,7 @@ public class User implements Serializable{
             
             
             
-            // Check if the email already exists in the file
+ // Check if the email already exists in the file
 boolean emailExists = false;
 FileInputStream fis = null;
 ObjectInputStream ois = null;
@@ -265,6 +265,62 @@ try {
 
          
   }
+  
+  
+//  public static void Forgetpassword(String useremail,String Password){
+//   boolean emailExists = false;
+//FileInputStream fis = null;
+//ObjectInputStream ois = null;
+//try {
+//    fis = new FileInputStream("EmpObjects.bin");
+//    ois = new ObjectInputStream(fis);
+//
+//    while (true) {
+//        User existingUser = (User) ois.readObject();
+//        if (existingUser.getUseremail().equals(useremail)) {
+//            emailExists = true;
+//            break;
+//        }
+//    }
+//}
+// catch (EOFException e) {
+//    // Reached the end of the file without finding the email
+//} catch (IOException | ClassNotFoundException e) {
+//    // Handle exceptions
+//    
+//}
+//            
+//    if (emailExists) {
+//    // Email already exists, inform the user
+//     a = new Alert(Alert.AlertType.WARNING);
+//    a.setTitle("Email Already Registered");
+//    a.setHeaderText("Error");
+//    a.setContentText("The provided email address is already registered. Please use a different email.");
+//    a.showAndWait();
+//    return;
+//} else {
+//    
+//      
+//            
+//            
+//            
+//            
+//         
+//    }     
+//
+//       } catch (IOException ex) {
+//         
+//       } finally {
+//           try {
+//                
+//                if(oos != null) oos.close();
+//           } catch (IOException ex) {
+//               
+//            }
+//        }   
+//    
+//  
+//   }
 }
         
           
