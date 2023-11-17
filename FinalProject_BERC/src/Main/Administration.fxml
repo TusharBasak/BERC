@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.AdministrationController">
+   <children>
+      <Text layoutX="48.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="uuu" />
+      <TextField layoutX="91.0" layoutY="150.0" />
+      <TextField layoutX="73.0" layoutY="280.0" />
+   </children>
+</AnchorPane>
