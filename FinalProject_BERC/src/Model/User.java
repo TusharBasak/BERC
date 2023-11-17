@@ -28,6 +28,7 @@ import javax.swing.text.AbstractDocument.Content;
 
 
 
+
 /**
  *
  * @author ISLAM
@@ -71,9 +72,8 @@ public class User implements Serializable{
         this.userType = userType;
     }
 
-   public static void createnewuser(String useremail,String Password,String usertype){
-    
-              File f = null;
+   public static final void createnewuser(String useremail,String Password,String usertype){
+         File f = null;
         FileOutputStream fos = null;      
         ObjectOutputStream oos = null;
            Alert a = new Alert(Alert.AlertType.CONFIRMATION);
@@ -91,7 +91,7 @@ public class User implements Serializable{
             
             
             
-            // Check if the email already exists in the file
+ // Check if the email already exists in the file
 boolean emailExists = false;
 FileInputStream fis = null;
 ObjectInputStream ois = null;
@@ -158,8 +158,10 @@ try {
            } catch (IOException ex) {
                
             }
-        }   
-}
+        }  
+
+       } 
+
    
 //   "Regulator","Administration","Management Officer",
 //         "Energy Producer and Distributor","Consumer","Financial Analyst",
@@ -211,8 +213,12 @@ try {
    
     }
         
-  public static void signin(String useremail,String Password,String usertype,ActionEvent event) throws ClassNotFoundException {
-     Alert a = new Alert(Alert.AlertType.INFORMATION);
+  public static final void signin(String useremail,String Password,String usertype,ActionEvent event) throws ClassNotFoundException {
+     
+      
+   
+
+    Alert a = new Alert(Alert.AlertType.INFORMATION);
     File f = new File("EmpObjects.bin");
 
     try(FileInputStream fis = new FileInputStream(f) ;
@@ -261,11 +267,264 @@ try {
     alert.setHeaderText("Input/Output Error");
     alert.setContentText("An unexpected error occurred while reading from the EmpObjects.bin file.");
     alert.showAndWait();
+   
 }
+  }
+  
+  
+  
+     
+    
+    }
+
+
+
+
+     
+
+
+
+      
+        
+  
+
+     
+   
+        
+
+    
+  
+ 
+      
+
+
+
+
+ 
+            
+
+
+        
+  
+
+  
+     
+       
+
+
+    
+    
+           
+
+
+   
+
+
+
+
+       
+
+
+
+    
+  
+
+
+     
+    
+    
+
+
+
+  
+      
+  
+
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+ 
+           
+           
+
+
+
+
+
+
+   
+        
+    
+   
+    
+
+
+
+        
+
+        
+
+      
+
+    
+   
+
 
          
-  }
-}
+  
+     
+
+               
+
+
+
+
+
+
+
+
+   
+        
+    
+   
+    
+
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
         
           
    

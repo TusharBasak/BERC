@@ -88,7 +88,7 @@ public class SigninController implements Initializable {
     @FXML
     private void signinOnClick(ActionEvent event) throws IOException {
         // Load the FXML file of the main scene
-    Parent root = FXMLLoader.load(getClass().getResource("Signin.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("Signup.fxml"));
 
     // Get the current stage from the ActionEvent
     Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -96,5 +96,7 @@ public class SigninController implements Initializable {
     // Set the root of the current stage's scene to the main scene's root
     currentStage.setScene(new Scene(root));
     }
+
+    
     
 }
