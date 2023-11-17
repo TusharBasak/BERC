@@ -28,6 +28,7 @@ import javax.swing.text.AbstractDocument.Content;
 
 
 
+
 /**
  *
  * @author ISLAM
@@ -71,9 +72,8 @@ public class User implements Serializable{
         this.userType = userType;
     }
 
-   public static void createnewuser(String useremail,String Password,String usertype){
-    
-              File f = null;
+   public static final void createnewuser(String useremail,String Password,String usertype){
+         File f = null;
         FileOutputStream fos = null;      
         ObjectOutputStream oos = null;
            Alert a = new Alert(Alert.AlertType.CONFIRMATION);
@@ -158,8 +158,10 @@ try {
            } catch (IOException ex) {
                
             }
-        }   
-}
+        }  
+
+       } 
+
    
 //   "Regulator","Administration","Management Officer",
 //         "Energy Producer and Distributor","Consumer","Financial Analyst",
@@ -211,8 +213,12 @@ try {
    
     }
         
-  public static void signin(String useremail,String Password,String usertype,ActionEvent event) throws ClassNotFoundException {
-     Alert a = new Alert(Alert.AlertType.INFORMATION);
+  public static final void signin(String useremail,String Password,String usertype,ActionEvent event) throws ClassNotFoundException {
+     
+      
+   
+
+    Alert a = new Alert(Alert.AlertType.INFORMATION);
     File f = new File("EmpObjects.bin");
 
     try(FileInputStream fis = new FileInputStream(f) ;
@@ -261,67 +267,264 @@ try {
     alert.setHeaderText("Input/Output Error");
     alert.setContentText("An unexpected error occurred while reading from the EmpObjects.bin file.");
     alert.showAndWait();
+   
 }
-
-         
   }
   
   
-//  public static void Forgetpassword(String useremail,String Password){
-//   boolean emailExists = false;
-//FileInputStream fis = null;
-//ObjectInputStream ois = null;
-//try {
-//    fis = new FileInputStream("EmpObjects.bin");
-//    ois = new ObjectInputStream(fis);
-//
-//    while (true) {
-//        User existingUser = (User) ois.readObject();
-//        if (existingUser.getUseremail().equals(useremail)) {
-//            emailExists = true;
-//            break;
-//        }
-//    }
-//}
-// catch (EOFException e) {
-//    // Reached the end of the file without finding the email
-//} catch (IOException | ClassNotFoundException e) {
-//    // Handle exceptions
-//    
-//}
-//            
-//    if (emailExists) {
-//    // Email already exists, inform the user
-//     a = new Alert(Alert.AlertType.WARNING);
-//    a.setTitle("Email Already Registered");
-//    a.setHeaderText("Error");
-//    a.setContentText("The provided email address is already registered. Please use a different email.");
-//    a.showAndWait();
-//    return;
-//} else {
-//    
-//      
-//            
-//            
-//            
-//            
-//         
-//    }     
-//
-//       } catch (IOException ex) {
-//         
-//       } finally {
-//           try {
-//                
-//                if(oos != null) oos.close();
-//           } catch (IOException ex) {
-//               
-//            }
-//        }   
-//    
-//  
-//   }
-}
+  
+     
+    
+    }
+
+
+
+
+     
+
+
+
+      
+        
+  
+
+     
+   
+        
+
+    
+  
+ 
+      
+
+
+
+
+ 
+            
+
+
+        
+  
+
+  
+     
+       
+
+
+    
+    
+           
+
+
+   
+
+
+
+
+       
+
+
+
+    
+  
+
+
+     
+    
+    
+
+
+
+  
+      
+  
+
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+ 
+           
+           
+
+
+
+
+
+
+   
+        
+    
+   
+    
+
+
+
+        
+
+        
+
+      
+
+    
+   
+
+
+         
+  
+     
+
+               
+
+
+
+
+
+
+
+
+   
+        
+    
+   
+    
+
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
         
           
    

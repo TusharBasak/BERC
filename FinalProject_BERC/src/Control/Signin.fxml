@@ -10,7 +10,7 @@
       <TextField fx:id="emailtextfield" layoutX="315.0" layoutY="101.0" promptText="Enter email" />
       <TextField fx:id="passwordtextfield" layoutX="315.0" layoutY="155.0" promptText="Enter Password" />
       <ComboBox fx:id="signupCombobox" layoutX="324.0" layoutY="211.0" prefWidth="150.0" />
-      <Button layoutX="366.0" layoutY="263.0" mnemonicParsing="false" onAction="#signupButtonOnClick" text="Signin" />
+      <Button layoutX="366.0" layoutY="263.0" mnemonicParsing="false" onAction="#signupButtonOnClick" text="Sign In" />
       <Button layoutX="563.0" layoutY="408.0" mnemonicParsing="false" onAction="#signinOnClick" text="New user! Register here" />
    </children>
 </AnchorPane>
