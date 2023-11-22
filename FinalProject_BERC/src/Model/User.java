@@ -14,9 +14,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.RandomAccessFile;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -213,12 +216,9 @@ try {
    
     }
         
-  public static final void signin(String useremail,String Password,String usertype,ActionEvent event) throws ClassNotFoundException {
-     
-      
-   
-
-    Alert a = new Alert(Alert.AlertType.INFORMATION);
+  public static final void signin(String useremail,String Password,String usertype,ActionEvent event)   {
+       
+   Alert a = new Alert(Alert.AlertType.INFORMATION);
     File f = new File("EmpObjects.bin");
 
     try(FileInputStream fis = new FileInputStream(f) ;
@@ -267,15 +267,415 @@ try {
     alert.setHeaderText("Input/Output Error");
     alert.setContentText("An unexpected error occurred while reading from the EmpObjects.bin file.");
     alert.showAndWait();
+}
+    
+
+  
+    
+    
+
    
 }
-  }
+
+    
+       
+   
+
+
   
   
   
+   public static final void changepassword(String useremail,String Password,String usertype) {
+   
+    Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+    try (FileInputStream fis = new FileInputStream("EmpObjects.bin");
+         FileOutputStream fos = new FileOutputStream("TempEmpObjects.bin");
+         ObjectInputStream ois = new ObjectInputStream(fis);
+         ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+
+        List<User> updatedUserList = new ArrayList<>();
+        boolean userFound = false;
+
+        while (true) {
+            try {
+                User user = (User) ois.readObject();
+                updatedUserList.add(user);
+
+                if (user.getUseremail().equals(useremail) && user.getUserType().equals(usertype)) {
+                    user.setPassword(Password);
+                    userFound = true;
+                    break; // Stop iterating once the user is found
+                }
+            } catch (EOFException e) {
+                // Reached the end of the file, break out of the loop
+                break;
+            } catch (IOException e) {
+               
+            } catch (ClassNotFoundException ex) {
+                
+            }
+        }
+
+        if (userFound) {
+            // Close both file streams before proceeding
+            oos.close();
+            fis.close();
+
+            // Delete the original file
+            new File("EmpObjects.bin").delete();
+
+            // Create a new output stream for the original file
+            FileOutputStream originalFos = new FileOutputStream("EmpObjects.bin");
+            ObjectOutputStream originalOos = new ObjectOutputStream(originalFos);
+
+            // Write the updated user records to the original file
+            for (User user : updatedUserList) {
+                originalOos.writeObject(user);
+            }
+
+            // Close the original file stream to ensure proper data flushing
+            originalOos.close();
+
+            // Rename the temporary file if necessary
+            File tempFile = new File("TempEmpObjects.bin");
+            if (tempFile.exists()) {
+                tempFile.delete();
+            }
+
+            a.setTitle("Password Changed  successfully");
+                    a.setHeaderText("Congratulations");
+                    a.setContentText("Weldone");
+                    a.showAndWait();
+                    
+                    
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("password change Failed");
+        alert.setHeaderText("Invalid Credentials");
+        alert.setContentText("Please check your username, password, and user type and try again.");
+        alert.showAndWait();
+        }
+    } catch (IOException e) {
+       
+    }
+}
+
+   
+}
+
+    
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+  
+
+
+       
+   
      
     
-    }
+    
+
+
+
+
+     
+
+
+
+      
+        
+  
+
+     
+   
+        
+
+    
+  
+ 
+      
+
+
+
+
+ 
+            
+
+
+        
+  
+
+  
+     
+       
+
+
+    
+    
+           
+
+
+   
+
+
+
+
+       
+
+
+
+    
+  
+
+
+     
+    
+    
+
+
+
+  
+      
+  
+
+      
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+ 
+           
+           
+
+
+
+
+
+
+   
+        
+    
+   
+    
+
+
+
+        
+
+        
+
+      
+
+    
+   
+
+
+         
+  
+     
+
+               
+
+
+
+
+
+
+
+
+   
+        
+    
+   
+    
+
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+        
+          
+   
+    
+    
+    
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+    
+
+  
+
+
+       
+   
+     
+    
+    
 
 
 

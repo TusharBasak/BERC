@@ -4,6 +4,7 @@
  */
 package Control;
 
+import Model.User;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,7 +17,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -24,37 +26,40 @@ import javafx.stage.Stage;
  *
  * @author ISLAM
  */
-public class MainsceneController implements Initializable {
+public class ChangepasswordController implements Initializable {
 
+    @FXML
+    private TextField emailTextfield;
+    @FXML
+    private TextField passwordTextfield;
+    @FXML
+    private ComboBox<String> userCombobox;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+          userCombobox .getItems().addAll("Regulator","Administration","Management Officer",
+         "Energy Producer and Distributor","Consumer","Financial Analyst",
+         "Human Resource","Employee");
+         userCombobox.setValue("Select a user?");
     }    
 
     @FXML
-    private void signUpButtonOnClick(ActionEvent event)  {
-        try {
-            // Load the FXML file of the main scene
-            Parent root = FXMLLoader.load(getClass().getResource("Signup.fxml"));
-            
-            // Get the current stage from the ActionEvent
-            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            
-            // Set the root of the current stage's scene to the main scene's root
-            currentStage.setScene(new Scene(root));
-        } catch (IOException ex) {
-            Logger.getLogger(MainsceneController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    private void changepasswordOnClick(ActionEvent event) {
+            User.changepassword(emailTextfield.getText(),passwordTextfield.getText(),userCombobox.getValue());
+             emailTextfield.clear();
+           passwordTextfield.clear();
+           userCombobox.setValue("Select a user?");
+        
     }
 
     @FXML
-    private void signInButtonOnClick(ActionEvent event)  {
+    private void backtoMainScene(ActionEvent event) {
         
         try {
+            // Load the FXML file of the main scene
             Parent root = FXMLLoader.load(getClass().getResource("Signin.fxml"));
             
             // Get the current stage from the ActionEvent
@@ -63,7 +68,7 @@ public class MainsceneController implements Initializable {
             // Set the root of the current stage's scene to the main scene's root
             currentStage.setScene(new Scene(root));
         } catch (IOException ex) {
-            Logger.getLogger(MainsceneController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ChangepasswordController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
