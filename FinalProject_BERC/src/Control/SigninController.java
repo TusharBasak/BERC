@@ -8,6 +8,8 @@ import Model.User;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -86,15 +88,37 @@ public class SigninController implements Initializable {
     }
 
     @FXML
-    private void signinOnClick(ActionEvent event) throws IOException {
-        // Load the FXML file of the main scene
-    Parent root = FXMLLoader.load(getClass().getResource("Signup.fxml"));
+    private void signinOnClick(ActionEvent event)  {
+        try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("Signup.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            Logger.getLogger(SigninController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
-    // Get the current stage from the ActionEvent
-    Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-    // Set the root of the current stage's scene to the main scene's root
-    currentStage.setScene(new Scene(root));
+    @FXML
+    private void changebuttonOnClick(ActionEvent event) {
+        try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("Changepassword.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            Logger.getLogger(SigninController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
     }
 
     

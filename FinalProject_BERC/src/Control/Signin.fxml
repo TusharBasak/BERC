@@ -12,5 +12,6 @@
       <ComboBox fx:id="signupCombobox" layoutX="324.0" layoutY="211.0" prefWidth="150.0" />
       <Button layoutX="366.0" layoutY="263.0" mnemonicParsing="false" onAction="#signupButtonOnClick" text="Sign In" />
       <Button layoutX="563.0" layoutY="408.0" mnemonicParsing="false" onAction="#signinOnClick" text="New user! Register here" />
+      <Button layoutX="366.0" layoutY="338.0" mnemonicParsing="false" onAction="#changebuttonOnClick" text="Change Password" />
    </children>
 </AnchorPane>
