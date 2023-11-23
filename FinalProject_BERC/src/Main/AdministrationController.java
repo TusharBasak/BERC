@@ -94,4 +94,20 @@ public class AdministrationController implements Initializable {
               
         }
     }
+
+    @FXML
+    private void viewEnergytariffOnClick(ActionEvent event) {
+        try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("Updateenergytarifflinechart.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            
+        }
+    }
 }

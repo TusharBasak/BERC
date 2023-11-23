@@ -67,11 +67,12 @@ public class RegulatorController implements Initializable {
         
     }
 
+  
     @FXML
-    private void updatevisionandmissionOnClick(ActionEvent event) {
+    private void updateEnergyTariffOnClick(ActionEvent event) {
          try {
             // Load the FXML file of the main scene
-            Parent root = FXMLLoader.load(getClass().getResource("UpdateVisionandMission.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("UpdateenergyTariff.fxml"));
             
             // Get the current stage from the ActionEvent
             Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
@@ -81,9 +82,6 @@ public class RegulatorController implements Initializable {
         } catch (IOException ex) {
               
         }
-        
-        
-        
     }
     
 }
