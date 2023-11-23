@@ -15,7 +15,7 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Energy Tariff">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
+                    <MenuItem mnemonicParsing="false" onAction="#updatevisionandmissionOnClick" text="Update vision and mision" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Application">

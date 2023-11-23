@@ -289,9 +289,10 @@ try {
    
     Alert a = new Alert(Alert.AlertType.CONFIRMATION);
     try (FileInputStream fis = new FileInputStream("EmpObjects.bin");
-         FileOutputStream fos = new FileOutputStream("TempEmpObjects.bin");
+        // FileOutputStream fos = new FileOutputStream("TempEmpObjects.bin");
          ObjectInputStream ois = new ObjectInputStream(fis);
-         ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+        // ObjectOutputStream oos = new ObjectOutputStream(fos)) 
+            ){
 
         List<User> updatedUserList = new ArrayList<>();
         boolean userFound = false;
@@ -318,7 +319,7 @@ try {
 
         if (userFound) {
             // Close both file streams before proceeding
-            oos.close();
+          //  oos.close();
             fis.close();
 
             // Delete the original file
@@ -337,10 +338,10 @@ try {
             originalOos.close();
 
             // Rename the temporary file if necessary
-            File tempFile = new File("TempEmpObjects.bin");
-            if (tempFile.exists()) {
-                tempFile.delete();
-            }
+//            File tempFile = new File("TempEmpObjects.bin");
+//            if (tempFile.exists()) {
+//                tempFile.delete();
+//            }
 
             a.setTitle("Password Changed  successfully");
                     a.setHeaderText("Congratulations");

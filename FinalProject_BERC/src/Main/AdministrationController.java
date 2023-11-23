@@ -16,6 +16,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
 import javafx.stage.Stage;
 
 /**
@@ -24,6 +26,9 @@ import javafx.stage.Stage;
  * @author ISLAM
  */
 public class AdministrationController implements Initializable {
+
+    @FXML
+    private MenuBar adminMenuBar;
 
     /**
      * Initializes the controller class.
@@ -54,4 +59,39 @@ public class AdministrationController implements Initializable {
     
     
 }
+
+    
+    
+
+    @FXML
+    private void visionOnClick(ActionEvent event) {
+         try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("Updatevisionstatement.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+              
+        }
+    }
+
+    @FXML
+    private void missionOnClick(ActionEvent event) {
+         try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("UpdatemissionStatement.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+              
+        }
+    }
 }

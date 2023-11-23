@@ -17,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 /**
@@ -26,13 +27,20 @@ import javafx.stage.Stage;
  */
 public class MainsceneController implements Initializable {
 
+    @FXML
+    private TextArea abouttextarea;
+    @FXML
+    private TextArea historytextarea;
+
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        abouttextarea.setEditable(false);
+        historytextarea.setEditable(false);
+        
     }    
 
     @FXML
@@ -63,8 +71,41 @@ public class MainsceneController implements Initializable {
             // Set the root of the current stage's scene to the main scene's root
             currentStage.setScene(new Scene(root));
         } catch (IOException ex) {
-            Logger.getLogger(MainsceneController.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
+    }
+
+    
+
+    @FXML
+    private void visionOnClick(ActionEvent event) {
+         try {
+            Parent root = FXMLLoader.load(getClass().getResource("/Main/Visionstatement.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            
+        }
+    }
+
+    @FXML
+    private void missionOnClick(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/Main/MissionStatement.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            
+        }
+        
     }
     
 }

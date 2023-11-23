@@ -61,8 +61,27 @@ public class RegulatorController implements Initializable {
             // Set the root of the current stage's scene to the main scene's root
             currentStage.setScene(new Scene(root));
         } catch (IOException ex) {
-            Logger.getLogger(RegulatorController.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
+        
+        
+    }
+
+    @FXML
+    private void updatevisionandmissionOnClick(ActionEvent event) {
+         try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("UpdateVisionandMission.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+              
+        }
+        
         
         
     }

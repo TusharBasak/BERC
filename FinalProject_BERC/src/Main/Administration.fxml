@@ -11,11 +11,12 @@
    <top>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <MenuBar>
+            <MenuBar fx:id="adminMenuBar">
               <menus>
                 <Menu mnemonicParsing="false" text="Vision and Mission">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
+                    <MenuItem mnemonicParsing="false" onAction="#visionOnClick" text="Update Vision " />
+                        <MenuItem mnemonicParsing="false" onAction="#missionOnClick" text="Update Mission" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Annual Report">
