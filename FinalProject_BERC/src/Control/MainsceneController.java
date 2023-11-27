@@ -107,5 +107,36 @@ public class MainsceneController implements Initializable {
         }
         
     }
+
+    @FXML
+    private void applicationbuttonOnClick(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/Main/Application.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            
+        }
+        
+    }
+
+    @FXML
+    private void viewApplicationButtonOnClick(ActionEvent event) {
+         try {
+            Parent root = FXMLLoader.load(getClass().getResource("/Main/Acceptedapplication.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            
+        }
+    }
     
 }

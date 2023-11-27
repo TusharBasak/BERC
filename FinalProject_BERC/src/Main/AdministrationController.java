@@ -16,6 +16,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.stage.Stage;
@@ -35,8 +37,11 @@ public class AdministrationController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       // Display a notification when the application starts
+      
+      
     }   
+       
 
     @FXML
     private void logoutOnClick(ActionEvent event) {
@@ -109,5 +114,22 @@ public class AdministrationController implements Initializable {
         } catch (IOException ex) {
             
         }
+    }
+
+    @FXML
+    private void manageEnergyPriceOnClick(ActionEvent event) {
+        try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("Manageenergyprice.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            
+        }
+        
     }
 }

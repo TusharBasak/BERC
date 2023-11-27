@@ -4,58 +4,59 @@
  */
 package Model;
 
-import java.io.BufferedWriter;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 
 /**
  *
  * @author ISLAM
  */
-public class UpdateTariff {
-    private String user;
-    Double existingprice,Newprice;
+public class ManageEnergyPrice {
+     private String usertype;
+     private double existingprice;
+     private double newprice;
 
-    public UpdateTariff() {
+    public ManageEnergyPrice() {
     }
 
-    public UpdateTariff(String user, Double existingprice, Double Newprice) {
-        this.user = user;
+    public ManageEnergyPrice(String usertype, double existingprice, double newprice) {
+        this.usertype = usertype;
         this.existingprice = existingprice;
-        this.Newprice = Newprice;
+        this.newprice = newprice;
     }
 
-    public String getUser() {
-        return user;
+    public String getUsertype() {
+        return usertype;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setUsertype(String usertype) {
+        this.usertype = usertype;
     }
 
-    public Double getExistingprice() {
+    public double getExistingprice() {
         return existingprice;
     }
 
-    public void setExistingprice(Double existingprice) {
+    public void setExistingprice(double existingprice) {
         this.existingprice = existingprice;
     }
 
-    public Double getNewprice() {
-        return Newprice;
+    public double getNewprice() {
+        return newprice;
     }
 
-    public void setNewprice(Double Newprice) {
-        this.Newprice = Newprice;
+    public void setNewprice(double newprice) {
+        this.newprice = newprice;
     }
-    public  void  updateinfo(String user,Double existingprice,Double newprice){
+   
+    
+     public  void  updateinfo(String user,Double existingprice,Double newprice){
          
 
     
     try {
         // Create a FileOutputStream object for the text file
-        FileOutputStream fileOutputStream = new FileOutputStream("tariffpricedata.txt", true);
+        FileOutputStream fileOutputStream = new FileOutputStream("Energypricedata.txt", true);
 
         // Convert data to string format
         String data = user + "," + existingprice + "," + newprice + "\n";
@@ -80,5 +81,7 @@ public class UpdateTariff {
     
     }
     
+    
+     
     
 }

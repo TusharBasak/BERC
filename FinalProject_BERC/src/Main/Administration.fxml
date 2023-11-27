@@ -31,8 +31,8 @@
                 </Menu>
                   <Menu mnemonicParsing="false" text="Energy Prices">
                      <items>
-                        <MenuItem mnemonicParsing="false" onAction="#viewEnergytariffOnClick" text="View Energy Tarif" />
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#viewEnergytariffOnClick" text="View Energy Tarif Comparision" />
+                        <MenuItem mnemonicParsing="false" onAction="#manageEnergyPriceOnClick" text="ManageEnergyPrice" />
                      </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Press Release">

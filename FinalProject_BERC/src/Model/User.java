@@ -76,7 +76,7 @@ public class User implements Serializable{
     }
 
    public static final void createnewuser(String useremail,String Password,String usertype){
-         File f = null;
+        File f = null;
         FileOutputStream fos = null;      
         ObjectOutputStream oos = null;
            Alert a = new Alert(Alert.AlertType.CONFIRMATION);
@@ -318,12 +318,11 @@ try {
         }
 
         if (userFound) {
-            // Close both file streams before proceeding
-          //  oos.close();
+           
             fis.close();
 
             // Delete the original file
-            new File("EmpObjects.bin").delete();
+             new File("EmpObjects.bin").delete();
 
             // Create a new output stream for the original file
             FileOutputStream originalFos = new FileOutputStream("EmpObjects.bin");
