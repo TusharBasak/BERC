@@ -1,0 +1,18 @@
+Single Stove,1234567890,hanumanu,1@gmail.com
+
+Double Stove,1234567890,Adalot Para,2@gmail.com
+
+Commercial,1234567890,Adalot Para,56@gmail.com
+
+Commercial,1234567890,Adalot Para,Tangail,56@gmail.com
+
+Commercial,1234567890,vhcgfu,123@gmail.com
+
+Power Plant,1234567890,hcgtf,1@gmail.com
+
+SME Industry,1234567890,bhjhgr,1@gmail.com
+
+Fertiliser,1234567890,ebgkjkhlseg,12@gmail.com
+
+Large Industry,1234567890,rbgkjhjer,1@gmail.com
+

@@ -17,15 +17,15 @@ import java.util.logging.Logger;
  *
  * @author ISLAM
  */
-public class Pricehikelinechart {
+public class Pricetariffhikelinechart {
     private String usertype;
     private double existingprice;
     private double newprice;
 
-    public Pricehikelinechart() {
+    public Pricetariffhikelinechart() {
     }
 
-    public Pricehikelinechart(String usertype, double existingprice, double newprice) {
+    public Pricetariffhikelinechart(String usertype, double existingprice, double newprice) {
         this.usertype = usertype;
         this.existingprice = existingprice;
         this.newprice = newprice;
@@ -55,10 +55,10 @@ public class Pricehikelinechart {
         this.newprice = newprice;
     }
     
-  public ArrayList<Pricehikelinechart> loadDataFromFile()  {
-    ArrayList<Pricehikelinechart> priceData = new ArrayList<>();
+  public ArrayList<Pricetariffhikelinechart> loadDataFromFile()  {
+    ArrayList<Pricetariffhikelinechart> priceData = new ArrayList<>();
 
-    try (BufferedReader reader = new BufferedReader(new FileReader("data.txt"))) {
+    try (BufferedReader reader = new BufferedReader(new FileReader("tariffpricedata.txt"))) {
         String line;
         while ((line = reader.readLine()) != null) {
             String[] parts = line.split(",");
@@ -67,7 +67,7 @@ public class Pricehikelinechart {
                 double existingPrice = Double.parseDouble(parts[1]);
                 double newPrice = Double.parseDouble(parts[2]);
 
-                priceData.add(new Pricehikelinechart(userType, existingPrice, newPrice));
+                priceData.add(new Pricetariffhikelinechart(userType, existingPrice, newPrice));
             }
         }
     } catch (FileNotFoundException ex) {

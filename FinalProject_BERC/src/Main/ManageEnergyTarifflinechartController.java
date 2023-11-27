@@ -4,7 +4,12 @@
  */
 package Main;
 
+import Model.ManageEnergyPrice;
+import Model.ManageEnergyPricelinechart;
 import Model.Pricetariffhikelinechart;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -30,45 +35,46 @@ import javafx.stage.Stage;
  *
  * @author ISLAM
  */
-public class UpdateenergytarifflinechartController implements Initializable {
+public class ManageEnergyTarifflinechartController implements Initializable {
 
     @FXML
-    private LineChart<String,Number> linechart;
+    private ComboBox<String> searchComboBox;
     @FXML
     private Label labellinechart;
+   ManageEnergyPricelinechart phlc=new  ManageEnergyPricelinechart();
+ ArrayList<ManageEnergyPricelinechart> Data = new ArrayList<>();
     @FXML
-    private ComboBox<String> searchComboBox;
-     Pricetariffhikelinechart phlc=new  Pricetariffhikelinechart();
- ArrayList<Pricetariffhikelinechart> Data = new ArrayList<>();
+    private LineChart<String,Number> linechart;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-         searchComboBox.getItems().addAll("Single Stove","Double Stove","Commercial",
+        searchComboBox.getItems().addAll("Single Stove","Double Stove","Commercial",
                "Power Plant","Large Industry","SME Industry","Fertiliser");
-       searchComboBox.setValue("Select Types of User");
+     searchComboBox.setValue("Select Types of User");
     }    
 
    
 
     @FXML
-    private void submitbuttonOnClick(ActionEvent event) {
+    private void submitButtonOnClick(ActionEvent event) {
         String search =searchComboBox.getValue();
         Double existingPrice=0.0,newPrice=0.0;
         String userType;
       Data= phlc.loadDataFromFile();
-    for (Pricetariffhikelinechart data : Data) {
+      for (ManageEnergyPricelinechart data : Data) {
            userType = data.getUsertype();
            if(userType.equals(search)){
              existingPrice = data.getExistingprice();
              newPrice = data.getNewprice();
              break;
            }
-        
-    }
     
-    linechart.getData().clear();
+      }
+          
+         linechart.getData().clear();
         XYChart.Series<String,Number> series1 = new XYChart.Series<String,Number>();
         series1.getData().add(new XYChart.Data<String,Number>("Existing Price",existingPrice));
         
@@ -102,14 +108,17 @@ public class UpdateenergytarifflinechartController implements Initializable {
                 }
             }
             );
-    } 
+    }   
+        
     }
     
+    
+    
      @FXML
-    private void backtodashbuttonOnClick(ActionEvent event) {
+    private void backDashBoardButtonOnClick(ActionEvent event) {
         try {
             // Load the FXML file of the main scene
-            Parent root = FXMLLoader.load(getClass().getResource("Administration.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Regulator.fxml"));
             
             // Get the current stage from the ActionEvent
             Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();

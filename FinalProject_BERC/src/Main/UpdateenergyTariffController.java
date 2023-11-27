@@ -4,7 +4,7 @@
  */
 package Main;
 
-import Model.Pricehikelinechart;
+import Model.Pricetariffhikelinechart;
 import Model.UpdateTariff;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -52,10 +52,10 @@ public class UpdateenergyTariffController implements Initializable {
     @FXML
     private ComboBox<String> userCombobox;
     UpdateTariff uptariff = new UpdateTariff();
-    Pricehikelinechart phlc=new  Pricehikelinechart();
+    Pricetariffhikelinechart phlc=new  Pricetariffhikelinechart();
     private LineChart<String,Number> linechart;
     private ComboBox<String> searchcombobox;
-     ArrayList<Pricehikelinechart> Data = new ArrayList<>();
+     ArrayList<Pricetariffhikelinechart> Data = new ArrayList<>();
      
     @FXML
     private AnchorPane anchorpane;
@@ -81,7 +81,8 @@ public class UpdateenergyTariffController implements Initializable {
           userCombobox.setValue("Select Types of User");
           ExistingpriceTextfield.clear();
           NewPriceTextfield.clear();
-        //open this textfile data.txt and 
+         //open this textfile data.txt and 
+         
     }
 
     
