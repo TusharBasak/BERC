@@ -200,5 +200,74 @@ public class RegulatorController implements Initializable {
         }
         
     }
+
+    @FXML
+    private void viewRatingOnClick(ActionEvent event) {
+        try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("RatingPieChart.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+              
+        }
+    }
+
+
+
+    @FXML
+    private void addnewMemberOnClick(ActionEvent event) {
+         try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("AddcommissionMember.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+              
+        }
+        
+    }
+
+    @FXML
+    private void deleteMemberOnClck(ActionEvent event) {
+         try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("DeletecommissionMember.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+              
+        }
+    }
+
+    @FXML
+    private void editMemberOnClck(ActionEvent event) {
+        
+        try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("Editcommissionmember.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+              
+        }
+        
+    }
     
 }

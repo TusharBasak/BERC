@@ -24,9 +24,11 @@
                     <MenuItem mnemonicParsing="false" onAction="#viewApplicationOnClick" text="View Application" />
                   </items>
                 </Menu>
-                  <Menu mnemonicParsing="false" text="License">
+                  <Menu mnemonicParsing="false" text="Commission Members">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#addnewMemberOnClick" text="Add new Member" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteMemberOnClck" text="Delete Member" />
+                        <MenuItem mnemonicParsing="false" onAction="#editMemberOnClck" text="Edit info" />
                      </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Notice">
@@ -34,14 +36,14 @@
                         <MenuItem mnemonicParsing="false" text="About" />
                      </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" text="Order Information">
+                  <Menu mnemonicParsing="false" text="License Ratio">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="view" />
                      </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" text="Vacancy">
+                  <Menu mnemonicParsing="false" text="Rating">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#viewRatingOnClick" text="View Rating" />
                      </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="User Ratio">
