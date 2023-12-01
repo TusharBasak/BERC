@@ -178,8 +178,8 @@ try {
             case "Administration":
                 root = FXMLLoader.load(getClass().getResource("/Main/Administration.fxml"));
                 break;
-            case "Contain Manager":
-                root = FXMLLoader.load(getClass().getResource(""));
+            case "Consumer":
+                root = FXMLLoader.load(getClass().getResource("/Main/ConsumerFXML.fxml"));
                break;
             case "Customer Care":
                 root = FXMLLoader.load(getClass().getResource(""));
@@ -188,7 +188,7 @@ try {
                 root = FXMLLoader.load(getClass().getResource(""));
                 break;
                 case "Financial Analyst":
-                root = FXMLLoader.load(getClass().getResource(""));
+                root = FXMLLoader.load(getClass().getResource("/Main/FinancialDashboardFXML.fxml"));
                 break;
                case "Subscriber":
                 root = FXMLLoader.load(getClass().getResource(""));
