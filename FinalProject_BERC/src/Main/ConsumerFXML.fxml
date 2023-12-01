@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="376.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.ConsumerFXMLController">
+   <children>
+      <Label layoutX="14.0" layoutY="10.0" prefHeight="33.0" prefWidth="205.0" text="Consumer Dashboard:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="41.0" prefHeight="22.0" prefWidth="67.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="74.0" prefHeight="22.0" prefWidth="90.0" text="Consumer Id:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutButton" layoutX="676.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutOnclick" prefHeight="25.0" prefWidth="67.0" text="Log Out" />
+      <Line endX="628.0" endY="-15.0" layoutX="117.0" layoutY="127.0" startX="-102.0" startY="-15.0" />
+      <Button fx:id="EnergyConservationButton" layoutX="15.0" layoutY="181.0" mnemonicParsing="false" onMouseClicked="#energyConservationOnClick" prefHeight="33.0" prefWidth="230.0" text="Energy Conservation and Sustainibility" wrapText="true" />
+      <TextArea fx:id="notificationTextArea" layoutX="558.0" layoutY="163.0" prefHeight="170.0" prefWidth="185.0" />
+      <Label layoutX="558.0" layoutY="129.0" prefHeight="19.0" prefWidth="185.0" text="Notification:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="tariffupdatesButton" layoutX="15.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#tariffOnClick" prefHeight="33.0" prefWidth="230.0" text="Tariff Updates and Notices" wrapText="true" />
+      <Button fx:id="payBills" layoutX="15.0" layoutY="277.0" mnemonicParsing="false" onMouseClicked="#payBillOnMouseClick" prefHeight="33.0" prefWidth="230.0" text="Pay Bill" />
+      <Button fx:id="billsAndConsumpButton" layoutX="15.0" layoutY="129.0" mnemonicParsing="false" onAction="#billsdetailsonclick" onMouseClicked="#billsOnMouseClick" prefHeight="33.0" prefWidth="230.0" text="Bills and Consumption" wrapText="true" />
+      <Button fx:id="inboxButton" layoutX="280.0" layoutY="129.0" mnemonicParsing="false" onMouseClicked="#inboxOnMouseClick" prefHeight="33.0" prefWidth="230.0" text="Inbox" wrapText="true" />
+      <Button fx:id="distriutorsButton" layoutX="280.0" layoutY="181.0" mnemonicParsing="false" onMouseClicked="#distributorsOnMouseClick" prefHeight="33.0" prefWidth="230.0" text="Distributors and Services" wrapText="true" />
+      <Button fx:id="safetyRulesButton" layoutX="280.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#safetyOnMouseClick" prefHeight="33.0" prefWidth="230.0" text="Safety Rules and Regulations" wrapText="true" />
+      <Button fx:id="enquiriesButton" layoutX="280.0" layoutY="277.0" mnemonicParsing="false" onMouseClicked="#enquiryOnMouseClick" prefHeight="33.0" prefWidth="230.0" text="Enquiries, Complaints and Feedback" />
+      <Line endX="2.0" endY="205.0" layoutX="536.0" layoutY="121.0" startX="2.0" startY="6.0" />
+      <Line endX="636.0" layoutX="112.0" layoutY="343.0" startX="-100.0" />
+      <TextField fx:id="nameTextField" editable="false" layoutX="15.0" layoutY="40.0" prefHeight="25.0" prefWidth="230.0" />
+      <TextField editable="false" layoutX="96.0" layoutY="73.0" text="211291" />
+   </children>
+</AnchorPane>
