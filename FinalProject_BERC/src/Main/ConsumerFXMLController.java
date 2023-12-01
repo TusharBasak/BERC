@@ -17,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -28,10 +29,6 @@ import javafx.stage.Stage;
  */
 public class ConsumerFXMLController implements Initializable {
 
-    @FXML
-    private Label nameLabel;
-    @FXML
-    private Label idLabel;
     @FXML
     private Button logoutButton;
     @FXML
@@ -52,18 +49,18 @@ public class ConsumerFXMLController implements Initializable {
     private Button safetyRulesButton;
     @FXML
     private Button enquiriesButton;
+    @FXML
+    private TextField nameTextField;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         // TODO
     }    
 
-    @FXML
-    private void logoutOnClick(MouseEvent event) {
-    }
 
     @FXML
     private void energyConservationOnClick(MouseEvent event) throws IOException {
@@ -147,6 +144,17 @@ public class ConsumerFXMLController implements Initializable {
         Stage stg = (Stage)((Node)event.getSource()).getScene().getWindow();
         stg.setScene(sceneB);
         stg.show();
+    }
+
+    @FXML
+    private void logoutOnclick(ActionEvent event) throws IOException  {
+        Parent sceneC = FXMLLoader.load(getClass().getResource("/Control/Mainscene.fxml"));
+        Scene sceneD = new Scene(sceneC);
+        Stage stg = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg.setScene(sceneD);
+        stg.show();
+        
+        
     }
     
 }
