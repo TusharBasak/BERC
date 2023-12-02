@@ -181,8 +181,8 @@ try {
             case "Contain Manager":
                 root = FXMLLoader.load(getClass().getResource(""));
                break;
-            case "Customer Care":
-                root = FXMLLoader.load(getClass().getResource(""));
+            case "Consumer":
+                root = FXMLLoader.load(getClass().getResource("/Main/ConsumerFXML.fxml"));
                 break;
             case "Legal Advisor":
                 root = FXMLLoader.load(getClass().getResource(""));

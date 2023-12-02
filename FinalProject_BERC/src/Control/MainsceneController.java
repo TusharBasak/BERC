@@ -138,5 +138,84 @@ public class MainsceneController implements Initializable {
             
         }
     }
+
+    @FXML
+    private void rateusOnClick(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/Main/Rate.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            
+        }
+        
+    }
+
+    @FXML
+    private void viewCommissionmembersOnClick(ActionEvent event) {
+         try {
+            Parent root = FXMLLoader.load(getClass().getResource("/Main/CommissionMembers.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            
+        }
+        
+    }
+
+   
+
+    @FXML
+    private void noticeboardOnClick(ActionEvent event) {
+          try {
+            Parent root = FXMLLoader.load(getClass().getResource("/Main/Noticeboard.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            
+        }
+    }
+
+    private void noticeOnClick(ActionEvent event) {
+         try {
+            Parent root = FXMLLoader.load(getClass().getResource("/Main/Noticeboard.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            
+        }
+        
+    }
+
+    @FXML
+    private void archieveButtonOnClick(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/Main/Archieve.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+            
+        }
+    }
     
 }

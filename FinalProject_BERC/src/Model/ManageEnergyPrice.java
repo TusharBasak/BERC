@@ -68,7 +68,7 @@ public class ManageEnergyPrice {
         // Close the FileOutputStream object
         fileOutputStream.close();
 
-        System.out.println("Data saved successfully");
+      //  System.out.println("Data saved successfully");
     } catch (IOException e) {
         
     }

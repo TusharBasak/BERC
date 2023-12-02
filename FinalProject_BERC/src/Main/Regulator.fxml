@@ -24,24 +24,28 @@
                     <MenuItem mnemonicParsing="false" onAction="#viewApplicationOnClick" text="View Application" />
                   </items>
                 </Menu>
-                  <Menu mnemonicParsing="false" text="License">
+                  <Menu mnemonicParsing="false" text="Commission Members">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#addnewMemberOnClick" text="Add new Member" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteMemberOnClck" text="Delete Member" />
+                        <MenuItem mnemonicParsing="false" onAction="#editMemberOnClck" text="Edit info" />
                      </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Notice">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#createNoticeOnClick" text="Create Notice" />
+                        <MenuItem mnemonicParsing="false" onAction="#publishnoticeOnClick" text="Publish Notice" />
                      </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" text="Order Information">
+                  <Menu mnemonicParsing="false" text="Archieve">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#createArchieveOnClick" text="Create Archieve" />
+                        <MenuItem mnemonicParsing="false" onAction="#publishArchieveOnClick" text="Publish Archieve" />
                      </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" text="Vacancy">
+                  <Menu mnemonicParsing="false" text="Rating">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#viewRatingOnClick" text="View Rating" />
                      </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="User Ratio">

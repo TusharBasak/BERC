@@ -16,3 +16,13 @@ Fertiliser,1234567890,ebgkjkhlseg,12@gmail.com
 
 Large Industry,1234567890,rbgkjhjer,1@gmail.com
 
+Commercial,7878787878,bhg,2@gmail.com
+
+SME Industry,1234567890,Adalot para,tangail,123@gmail.com
+
+Commercial,1234567890,Boro kalibari road,123@gmail.com
+
+Fertiliser,1234567890,Tushar Basak,23@gmail.com
+
+Single Stove,1234567890,Tangail,123@gmail.com
+

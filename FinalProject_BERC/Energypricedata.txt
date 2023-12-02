@@ -1,0 +1,2 @@
+Single Stove,890.0,23300.0
+Single Stove,345.0,2345.0
