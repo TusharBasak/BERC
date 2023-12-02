@@ -23,10 +23,10 @@ import javafx.scene.control.Alert;
  * @author ISLAM
  */
 public class Applicationstatus {
-    String usertype;
-    String nid;
-    String address;
-    String email;
+   private String usertype;
+   private String nid;
+   private String address;
+   private String email;
     boolean notification1=false,notification2;
     int cnt=0;
      private int prevcount=0;

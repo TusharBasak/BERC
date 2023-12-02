@@ -24,3 +24,5 @@ Commercial,1234567890,Boro kalibari road,123@gmail.com
 
 Fertiliser,1234567890,Tushar Basak,23@gmail.com
 
+Single Stove,1234567890,Tangail,123@gmail.com
+

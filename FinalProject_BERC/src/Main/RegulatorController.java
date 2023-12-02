@@ -269,5 +269,71 @@ public class RegulatorController implements Initializable {
         }
         
     }
+
+    @FXML
+    private void createNoticeOnClick(ActionEvent event) {
+        try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("Notice.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+              
+        }
+    }
+
+    @FXML
+    private void publishnoticeOnClick(ActionEvent event) {
+        try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("Publish Notice.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+              
+        }
+    }
+
+    @FXML
+    private void createArchieveOnClick(ActionEvent event) {
+        try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("CreateArchieve.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+              
+        }
+        
+        
+    }
+
+    @FXML
+    private void publishArchieveOnClick(ActionEvent event) {
+        try {
+            // Load the FXML file of the main scene
+            Parent root = FXMLLoader.load(getClass().getResource("Publish Archieve.fxml"));
+            
+            // Get the current stage from the ActionEvent
+            Stage currentStage = (Stage) adminMenuBar.getScene().getWindow();
+            
+            // Set the root of the current stage's scene to the main scene's root
+            currentStage.setScene(new Scene(root));
+        } catch (IOException ex) {
+              
+        }
+    }
     
 }

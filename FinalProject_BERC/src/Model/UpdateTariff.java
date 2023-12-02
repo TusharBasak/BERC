@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 public class UpdateTariff {
     private String user;
-    Double existingprice,Newprice;
+    private Double existingprice,Newprice;
 
     public UpdateTariff() {
     }

@@ -19,9 +19,11 @@
       <TextArea fx:id="historytextarea" layoutX="568.0" layoutY="122.0" prefHeight="494.0" prefWidth="411.0" style="-fx-background-color: aqua;" text="                         &#10;History&#10;&#10;&#10;&#10;The commission was created in 2004 and is responsible for the setting up of gas and electricity prices in Bangladesh. Its also arbitrates disputes in the energy industry.[2] Its approval is need for any changes in the price of electricity.[4] The Energy Security Fund is under this agency.[5]" wrapText="true" />
       <Button layoutX="26.0" layoutY="22.0" mnemonicParsing="false" onAction="#visionOnClick" text="View Vission" />
       <Button layoutX="161.0" layoutY="22.0" mnemonicParsing="false" onAction="#missionOnClick" text="View Mission" />
-      <Button layoutX="14.0" layoutY="354.0" mnemonicParsing="false" onAction="#applicationbuttonOnClick" text="Application" />
+      <Button layoutX="186.0" layoutY="354.0" mnemonicParsing="false" onAction="#applicationbuttonOnClick" text="Application" />
       <Button layoutX="12.0" layoutY="482.0" mnemonicParsing="false" onAction="#viewApplicationButtonOnClick" text="View Accepted Application" />
-      <Button layoutX="418.0" layoutY="685.0" mnemonicParsing="false" onAction="#rateusOnClick" text="Rate us!!" />
+      <Button layoutX="308.0" layoutY="354.0" mnemonicParsing="false" onAction="#rateusOnClick" text="Rate us!!" />
       <Button layoutX="224.0" layoutY="482.0" mnemonicParsing="false" onAction="#viewCommissionmembersOnClick" text="view Commission Members" />
+      <Button layoutX="54.0" layoutY="354.0" mnemonicParsing="false" onAction="#noticeboardOnClick" text="Notice Board" />
+      <Button layoutX="403.0" layoutY="765.0" mnemonicParsing="false" onAction="#archieveButtonOnClick" text="Archieve" />
    </children>
 </AnchorPane>
