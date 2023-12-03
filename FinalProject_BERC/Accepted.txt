@@ -26,3 +26,5 @@ Fertiliser,1234567890,Tushar Basak,23@gmail.com
 
 Single Stove,1234567890,Tangail,123@gmail.com
 
+Power Plant,1234567890,Dhaka,23@gmail.com
+
