@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="844.0" prefWidth="969.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.PolicyManagementOfficerSceneController">
+   <children>
+      <Label layoutX="81.0" layoutY="327.0" prefHeight="232.0" prefWidth="622.0" text="Welcome to the scene" />
+   </children>
+</AnchorPane>
